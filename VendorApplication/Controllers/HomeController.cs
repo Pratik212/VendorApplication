@@ -36,8 +36,8 @@ namespace VendorApplication.Controllers
 
             var addVendor = _context.Vendors.Add(vendor);
             _context.SaveChanges();
-
-            return RedirectToAction("Index");
+            ViewBag.VendorTitle = "Vendor Details Successfully Added.";
+            return View("Index");
         }
 
         [HttpPost]
@@ -46,8 +46,8 @@ namespace VendorApplication.Controllers
         public IActionResult AddBank(BankDto bankDetail)
         {
             AddBankDetail(bankDetail);
-
-            return RedirectToAction("Index");
+            ViewBag.title = "Bank Details Successfully Added.";
+            return View("Index");
         }
 
         private void AddBankDetail(BankDto bankDetail)
@@ -101,9 +101,10 @@ namespace VendorApplication.Controllers
                 addBankDetail.UploadPancard = fileName;
             }
 
-
             _context.BankDetails.Add(addBankDetail);
             _context.SaveChanges();
+
+           
         }
     }
 }
