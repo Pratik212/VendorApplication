@@ -26,6 +26,11 @@ namespace VendorApplication
         {
             services.AddControllersWithViews();
 
+            services.Configure<Settings>(options =>
+            {
+                options.DocumentsPath = Configuration.GetSection("AppSettings:DocumentsPath").Value;
+            });
+
             services.AddDbContext<VendorContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

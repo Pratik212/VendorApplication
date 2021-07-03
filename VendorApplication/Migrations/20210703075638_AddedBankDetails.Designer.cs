@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VendorApplication.Data;
 
 namespace VendorApplication.Migrations
 {
     [DbContext(typeof(VendorContext))]
-    partial class VendorContextModelSnapshot : ModelSnapshot
+    [Migration("20210703075638_AddedBankDetails")]
+    partial class AddedBankDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

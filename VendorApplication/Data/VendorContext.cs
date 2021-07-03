@@ -14,5 +14,6 @@ namespace VendorApplication.Data
         }
 
         public DbSet<Vendor> Vendors { get; set; }
+        public DbSet<BankDetail> BankDetails { get; set; }
     }
 }

@@ -1,11 +1,11 @@
-﻿@model VendorApplication.Models.Vendor
+﻿@model VendorApplication.Dtos.VendorRegistration
 
 <div>
     <div class="">
         <div class="btn btn-light ml-5 mt-2">
             Vendor Details
         </div>
-        <hr class="mt-0"  />
+        <hr class="mt-0" />
     </div>
 
     <div class="border mt-3 p-3">
@@ -13,7 +13,7 @@
         <div>
             <h4>New Vendor Registration</h4>
         </div>
-        <hr/>
+        <hr />
 
 
         <div class="bs-example m-3">
@@ -31,132 +31,133 @@
                         <div class="card-body">
 
                             <form asp-action="AddVendor">
-                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div asp-validation-summary="All" class="text-danger"></div>
                                 <div class="col-md-12">
                                     <div class="col-md-6 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="Name" class="control-label font-weight-bold">Name (Proprietors/ Partners /Directors) <span style="color:red;">*</span> </label>
-                                        <input asp-for="Name" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                        <label asp-for="Vendor.Name" class="control-label font-weight-bold">Name (Proprietors/ Partners /Directors) <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.Name" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="Name" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="NameOfBussiness" class="control-label font-weight-bold">Name Of Bussiness <span style="color:red;">*</span> </label>
-                                        <input asp-for="NameOfBussiness" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="NameOfBussiness" class="text-danger"></span>
+                                        <label asp-for="Vendor.NameOfBussiness" class="control-label font-weight-bold">Name Of Bussiness <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.NameOfBussiness" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="NameOfBussiness" class="text-danger"></span>*@
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group d-flex align-items-baseline">
-                                        <label asp-validation-for="Year" class="control-label font-weight-bold">Year of Establishment <span style="color:red;">*</span> </label>
-                                        <input asp-for="Year" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="Year" class="text-danger"></span>
+                                        <label asp-validation-for="Vendor.Year" class="control-label font-weight-bold">Year of Establishment <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.Year" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="Year" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-validation-for="Address1" class="control-label font-weight-bold">Address1 <span style="color:red;">*</span> </label>
-                                        <input asp-for="Address1" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="Address1" class="text-danger"></span>
+                                        <label asp-validation-for="Vendor.Address1" class="control-label font-weight-bold">Address1 <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.Address1" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="Address1" class="text-danger"></span>*@
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group d-flex align-items-baseline">
-                                        <label asp-validation-for="Address2" class="control-label font-weight-bold">Address2 <span style="color:red;">*</span> </label>
-                                        <input asp-for="Address2" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="Address2" class="text-danger"></span>
+                                        <label asp-validation-for="Vendor.Address2" class="control-label font-weight-bold">Address2 <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.Address2" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="Address2" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="City" class="control-label font-weight-bold">City <span style="color:red;">*</span> </label>
-                                        <input asp-for="City" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="City" class="text-danger"></span>
+                                        <label asp-for="Vendor.City" class="control-label font-weight-bold">City <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.City" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        @*<span asp-validation-for="City" class="text-danger"></span>*@
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group d-flex align-items-baseline">
-                                        <label asp-for="PinNo" class="control-label font-weight-bold">PIN No. <span style="color:red;">*</span> </label>
-                                        <input asp-for="PinNo" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="PinNo" class="text-danger"></span>
+                                        <label asp-for="Vendor.PinNo" class="control-label font-weight-bold">PIN No. <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.PinNo" class="form-control ml-4" style="width:400px;" id="focusedInput" type="number">
+                                        @*<span asp-validation-for="PinNo" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="State" class="control-label font-weight-bold">State <span style="color:red;">*</span> </label>
-                                        <select asp-for="State" class="ml-4" style="width: 400px; border: 1px solid #ced4da; padding: 6px; border-radius:5px;">
+                                        <label asp-for="Vendor.State" class="control-label font-weight-bold">State <span style="color:red;">*</span> </label>
+                                        <select asp-for="Vendor.State" class="ml-4" style="width: 400px; border: 1px solid #ced4da; padding: 6px; border-radius:5px;">
                                             <option>---select state---</option>
                                             <option>Gujarat</option>
                                             <option>Maharastra</option>
                                             <option>Kolkata</option>
                                         </select>
-                                        <span asp-validation-for="State" class="text-danger"></span>
+                                        @*<span asp-validation-for="State" class="text-danger"></span>*@
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="Country" class="control-label font-weight-bold">Country <span style="color:red;">*</span> </label>
-                                        <select asp-for="Country" class="ml-4" style="width: 400px; border: 1px solid #ced4da; padding: 6px; border-radius: 5px;">
+                                        <label asp-for="Vendor.Country" class="control-label font-weight-bold">Country <span style="color:red;">*</span> </label>
+                                        <select asp-for="Vendor.Country" class="ml-4" style="width: 400px; border: 1px solid #ced4da; padding: 6px; border-radius: 5px;">
                                             <option>---select country---</option>
                                             <option>India</option>
-                                            <option>Englend</option>
+                                            <option>England</option>
                                             <option>New Zelend</option>
                                         </select>
-                                        <span asp-validation-for="Country" class="text-danger"></span>
+                                        @*<span asp-validation-for="Country" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="OfficePhoneNo" class="control-label font-weight-bold">Tel. No. (Office) <span style="color:red;">*</span> </label>
-                                        <input asp-for="OfficePhoneNo" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="OfficePhoneNo" class="text-danger"></span>
+                                        <label asp-for="Vendor.OfficePhoneNo" class="control-label font-weight-bold">Tel. No. (Office) <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.OfficePhoneNo" class="form-control ml-4" style="width:400px;"  type="number">
+                                        @*<span asp-validation-for="OfficePhoneNo" class="text-danger"></span>*@
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="ResidencePhoneNo" class="control-label font-weight-bold">Tel. No.(Residence) <span style="color:red;">*</span> </label>
-                                        <input asp-for="ResidencePhoneNo" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="ResidencePhoneNo" class="text-danger"></span>
-                                    </div>
-                                </div>
-
-                                <div class="row col-md-12">
-                                    <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="FactoryPhoneNo" class="control-label font-weight-bold">Tel. No. (Factory) <span style="color:red;">*</span> </label>
-                                        <input asp-for="FactoryPhoneNo" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="FactoryPhoneNo" class="text-danger"></span>
-                                    </div>
-
-                                    <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="PhoneNo" class="control-label font-weight-bold">Mobile Number <span style="color:red;">*</span> </label>
-                                        <input asp-for="PhoneNo" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="PhoneNo" class="text-danger"></span>
+                                        <label asp-for="Vendor.ResidencePhoneNo" class="control-label font-weight-bold">Tel. No.(Residence) <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.ResidencePhoneNo" class="form-control ml-4" style="width:400px;"  type="number">
+                                        @*<span asp-validation-for="ResidencePhoneNo" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
+                                        <label asp-for="Vendor.FactoryPhoneNo" class="control-label font-weight-bold">Tel. No. (Factory) <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.FactoryPhoneNo" class="form-control ml-4" style="width:400px;" type="number">
+                                        @*<span asp-validation-for="FactoryPhoneNo" class="text-danger"></span>*@
+                                    </div>
 
-                                        <label asp-for="Email" class="control-label font-weight-bold">Email Id <span style="color:red;">*</span> </label>
-                                        <input asp-for="Email" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
+                                        <label asp-for="Vendor.PhoneNo" class="control-label font-weight-bold">Mobile Number <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.PhoneNo" class="form-control ml-4" style="width:400px;"type="number">
+                                        @*<span asp-validation-for="PhoneNo" class="text-danger"></span>*@
+                                    </div>
+                                </div>
+
+                                <div class="row col-md-12">
+                                    <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
+
+                                        <label asp-for="Vendor.Email" class="control-label font-weight-bold">Email Id <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.Email" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="Email" class="text-danger"></span>*@
 
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label asp-for="Website" class="control-label font-weight-bold">Web Site <span style="color:red;">*</span> </label>
-                                        <input asp-for="Website" class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
-                                        <span asp-validation-for="Website" class="text-danger"></span>
+                                        <label asp-for="Vendor.Website" class="control-label font-weight-bold">Web Site <span style="color:red;">*</span> </label>
+                                        <input asp-for="Vendor.Website" class="form-control ml-4" style="width:400px;"  type="text">
+                                        @*<span asp-validation-for="Website" class="text-danger"></span>*@
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12 d-flex justify-content-end">
-                                    <input type="submit" value="AddVendor" class="btn btn-primary" />
+                                    <input type="submit" value="Save" class="btn btn-primary" />
                                 </div>
                             </form>
 
                         </div>
+
                     </div>
                 </div>
                 <hr class=" mt-0" />
@@ -171,53 +172,53 @@
                     </div>
                     <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
-                            <form>
-
+                            <form asp-action="AddBank" enctype="multipart/form-data" method="post">
+                                <div asp-validation-summary="All" class="text-danger"> </div>
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label class="control-label font-weight-bold">Bank Name <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.BankName" class="control-label font-weight-bold">Bank Name <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.BankName" class="form-control ml-4" style="width:400px;" type="text">
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group d-flex align-items-baseline">
-                                        <label class="control-label font-weight-bold">Account Number <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.AccountNumber" class="control-label font-weight-bold">Account Number <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.AccountNumber" class="form-control ml-4" style="width:400px;"  type="number">
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label class="control-label font-weight-bold">Branch Name & Address <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.BranchName" class="control-label font-weight-bold">Branch Name & Address <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.BranchName" class="form-control ml-4" style="width:400px;"  type="text">
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group d-flex align-items-baseline">
-                                        <label class="control-label font-weight-bold">Type of Account <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.AccountType" class="control-label font-weight-bold">Type of Account <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.AccountType" class="form-control ml-4" style="width:400px;"  type="text">
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label class="control-label font-weight-bold">MICR No. <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.MicrNo" class="control-label font-weight-bold">MICR No. <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.MicrNo" class="form-control ml-4" style="width:400px;"  type="number">
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group d-flex align-items-baseline">
-                                        <label class="control-label font-weight-bold">IFSC code of branch. <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.IfscCode" class="control-label font-weight-bold">IFSC code of branch. <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.IfscCode" class="form-control ml-4" style="width:400px;"  type="text">
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label class="control-label font-weight-bold">For NEFT <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4" style="width:400px;" id="focusedInput" type="text">
+                                        <label asp-for="BankDetail.Neft" class="control-label font-weight-bold">For NEFT <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.Neft" class="form-control ml-4" style="width:400px;" type="text">
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label class="control-label font-weight-bold">Upload cancelled Cheque <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4 " style="width:400px;" type="file" id="img" name="img" accept="image/*">
+                                        <label asp-for="BankDetail.UploadCheque" class="control-label font-weight-bold">Upload cancelled Cheque <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.UploadCheque" class="form-control ml-4 " style="width:400px;" type="file" accept="image/*">
                                     </div>
                                 </div>
 
@@ -225,19 +226,19 @@
                                 <div class="row col-md-12">
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
 
-                                        <label class="control-label font-weight-bold">Upload GST Certificate <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4 " style="width:400px;" type="file" id="img" name="img" accept="image/*">
+                                        <label asp-for="BankDetail.UploadGstCertificate" class="control-label font-weight-bold">Upload GST Certificate <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.UploadGstCertificate" class="form-control ml-4 " style="width:400px;" type="file" accept="image/*">
 
                                     </div>
 
                                     <div class="col-md-6 p-0 d-flex justify-content-end form-group  align-items-baseline">
-                                        <label class="control-label font-weight-bold">Upload PAN Card <span style="color:red;">*</span> </label>
-                                        <input class="form-control ml-4 " style="width:400px;" type="file" id="img" name="img" accept="image/*">
+                                        <label asp-for="BankDetail.UploadPancard" class="control-label font-weight-bold">Upload PAN Card <span style="color:red;">*</span> </label>
+                                        <input asp-for="BankDetail.UploadPancard" class="form-control ml-4 " style="width:400px;" type="file"    accept="image/*">
                                     </div>
                                 </div>
 
                                 <div class="row col-md-12 d-flex justify-content-end">
-                                    <button type="button" class="btn btn-primary">Save</button>
+                                    <input type="submit" value="Save" class="btn btn-primary" />
                                 </div>
 
                             </form>
@@ -254,4 +255,11 @@
         </div>
     </div>
 </div>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
 

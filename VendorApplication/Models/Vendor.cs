@@ -12,7 +12,7 @@ namespace VendorApplication.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(30)]
         public string Name { get; set; }
 
         [Required]
@@ -31,8 +31,7 @@ namespace VendorApplication.Models
         public string City { get; set; }
 
         [Required]
-        [MaxLength(6)]
-        public int PinNo { get; set; }
+        public string PinNo { get; set; }
 
         [Required]
         public string State { get; set; }
@@ -41,20 +40,17 @@ namespace VendorApplication.Models
         public string Country { get; set; }
 
         [Required]
-        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Please Enter Valid Number.")]
-        public int OfficePhoneNo { get; set; }
+        public string OfficePhoneNo { get; set; }
 
         [Required]
-        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Please Enter Valid Number.")]
-        public int ResidencePhoneNo { get; set; }
+        public string ResidencePhoneNo { get; set; }
 
         [Required]
-        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Please Enter Valid Number.")]
-        public int FactoryPhoneNo { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        public string FactoryPhoneNo { get; set; }
 
         [Required]
-        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Please Enter Valid Mobile Number.")]
-        public int PhoneNo { get; set; }
+        public string PhoneNo { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]

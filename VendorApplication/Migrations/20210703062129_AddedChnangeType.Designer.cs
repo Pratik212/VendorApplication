@@ -2,63 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VendorApplication.Data;
 
 namespace VendorApplication.Migrations
 {
     [DbContext(typeof(VendorContext))]
-    partial class VendorContextModelSnapshot : ModelSnapshot
+    [Migration("20210703062129_AddedChnangeType")]
+    partial class AddedChnangeType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
-
-            modelBuilder.Entity("VendorApplication.Models.BankDetail", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int>("AccountNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AccountType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BankName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BranchName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IfscCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MicrNo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Neft")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UploadCheque")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UploadGstCertificate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UploadPancard")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BankDetails");
-                });
 
             modelBuilder.Entity("VendorApplication.Models.Vendor", b =>
                 {
@@ -89,7 +49,8 @@ namespace VendorApplication.Migrations
 
                     b.Property<string>("FactoryPhoneNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -102,19 +63,23 @@ namespace VendorApplication.Migrations
 
                     b.Property<string>("OfficePhoneNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("PhoneNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("PinNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
 
                     b.Property<string>("ResidencePhoneNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("State")
                         .IsRequired()
@@ -125,6 +90,7 @@ namespace VendorApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Year")
+                        .HasMaxLength(4)
                         .HasColumnType("int");
 
                     b.HasKey("Id");
